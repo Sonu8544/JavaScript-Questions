@@ -8,7 +8,7 @@ function deBounceFunction(data, time) {
     return function (...argss) {
         if (time) clearTimeout(time);
         newTime = setTimeout(() => {
-            data.call( argss);
+            data()
         }, time)
     }
 }
